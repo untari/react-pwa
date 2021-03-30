@@ -19,9 +19,9 @@ class Navigation extends Component {
                     <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
                         <div className="collapse navbar-collapse" id="navbarCollapse">
                             <div className="navbar-nav  ml-auto">
-                                <NavLink to="/" style={style} activeClassName="active" id="nav2">Home</NavLink>
-                                <NavLink to="/about" style={style} activeClassName="active" id="nav2">About</NavLink>
-                                <NavLink to="/contact" style={style} activeClassName="active" id="nav2">Contact</NavLink>
+                                <NavLink to="/" style={style} activeClassName="active" id="nav2">System Data</NavLink>
+                                <NavLink to="/system diagnosticsmanager" style={style} activeClassName="active" id="nav2">System Diagnostics Manager</NavLink>
+                                <NavLink to="/systemstate" style={style} activeClassName="active" id="nav2">System State</NavLink>
                             </div>
                         </div>
                     </nav>
