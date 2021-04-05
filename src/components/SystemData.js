@@ -1,10 +1,10 @@
 import React from "react";
 
 const SystemData = () => {
-       document.body.addEventListener('build', function(event) {   
-           process(event.detail)
-            console.log('get started');
-        });
+document.body.addEventListener('build', (event) => {   
+            console.log(`started! : ${event.detail.request}`);
+        })
+        
     return (
             <div>
                     <h1>Cpu Info</h1>
