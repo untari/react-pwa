@@ -1,24 +1,28 @@
-import React, {Component, useEffect, useState } from "react";
-
+import React, { useEffect, useState } from "react";
 
 const SystemData = () => {
-     const [example, setExample] = useState(null);
-     
+     const [cpu, setCpu] = useState(null);
+     const [memory, setMemory] = useState(null);
      const cpuInfo = () => {document.body.addEventListener('build',   function(event)  { 
-            setExample(event.detail.request)
+            setCpu(event.detail.request)
             console.log(`started! : ${event.detail.request}`);
         })}
     
+    const memoryUsage = () => {document.body.addEventListener('build',   function(event)  { 
+        setMemory(event.detail.request)
+        console.log(`started! : ${event.detail.request}`);
+    })}
+    
     useEffect(() => {
             cpuInfo()
+            memoryUsage()
         }, []);
-    
-    console.log(example, 'example')
-        
+    console.log(memory, 'example')
     return (
         <div>
-            <h1>Cpu System Info!!</h1>
-            <p>{example}</p>
+            <h1>Cpu System</h1>
+                <div><p>{cpu}</p></div>
+                <div><p>{memory}</p></div>
         </div>)
 }
 export default SystemData;
